@@ -22,13 +22,15 @@
         if (response == 'granted') {
 
             var status = document.querySelector("p")
-            status.innerHTML = "on";
+            // status.innerHTML = "on";
             // Do stuff here
 
         // Add a listener to get smartphone acceleration
             // in the XYZ axes (units in m/s^2)
             window.addEventListener('devicemotion', (event) => {
                 console.log(event);
+                status.innerHTML = event;
+
             });
        // Add a listener to get smartphone orientation
            // in the alpha-beta-gamma axes (units in degrees)
