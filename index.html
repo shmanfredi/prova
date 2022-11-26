@@ -29,7 +29,7 @@
             // in the XYZ axes (units in m/s^2)
             window.addEventListener('devicemotion', (event) => {
                 console.log(event);
-                status.innerHTML = event;
+                status.innerHTML = event.accelerationIncludingGravity.x;
 
             });
        // Add a listener to get smartphone orientation
