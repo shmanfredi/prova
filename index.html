@@ -31,7 +31,8 @@
             // in the XYZ axes (units in m/s^2)
             window.addEventListener('devicemotion', (event) => {
                 console.log(event);
-                rotation = Math.floor((event.rotationRate.alpha)*100)+Math.floor((event.rotationRate.beta)*100)+Math.floor((event.rotationRate.gamma)*100);
+                rotation = Math.floor((event.rotationRate.gamma)*100);
+                //Math.floor((event.rotationRate.alpha)*100)+Math.floor((event.rotationRate.beta)*100)+
                 if (rotation >= 2000 || rotation <=-2000){
                   document.getElementById("caso").style.backgroundColor = "black";
                 }
